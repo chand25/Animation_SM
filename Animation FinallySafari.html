@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ole School Sega</title>
+	<style type="text/css">
+		
+		#Genesis{
+			height: 50px;
+			width: 50px;
+			position: absolute;
+			z-index: 2;
+			border-right: solid orange;
+			border-top: solid orange;
+			border-bottom: solid orange;
+			border-left: solid orange;
+			border-top-left-radius: 25px;
+			background-color: red;
+
+		}
+		
+		#Sega{
+			height: 400px;
+			width: 400px;
+			position:relative;
+			border-bottom: 10px solid silver;
+			margin-top: 10%;
+			margin-left: 6.5%;
+			background: white;
+			border-left: 30px solid blue;
+		}
+		
+body{background-image: url(segaback2.jpg);
+	background-size: cover;
+	
+}
+
+div{display: inline-block;}
+
+		#teeth{height: 5px;
+			   width: 5px;
+			border-left: 70px solid transparent;
+		    border-right: 70px solid rgba(40, 30, 175, .8);
+		    border-top: 70px solid rgba(40, 30, 175, .8);
+		    border-bottom: 70px solid rgba(40, 30, 175, .8);
+		    border-bottom-left-radius: 70px;
+		    border-top-right-radius: 70px;
+		    border-bottom-right-radius: 70px;
+		    border-top-left-radius: 70px;
+		    position: absolute;
+		    z-index: 2;
+		    margin: 80% 0% 10% -10%;
+		    
+		}
+		
+
+
+		#sonic2{
+            height: 50%;
+			width: 400px;
+			margin-top: 50%;
+			margin-left: 0%;
+			position: relative;
+			z-index: 0;
+			
+		}
+
+		li a:hover, .dropdown:hover{
+			background-color: blue;
+		}
+		
+		.dropdown{
+			display:inline-block;
+		}
+
+		.meat{
+			display:none;
+			position:absolute;
+			background-color: navy;
+			min-width: 100px;
+			z-index: 4;
+		}
+		
+
+		ul li{
+			display:inline;
+			list-style: none;
+		}
+		
+
+		ul{
+			background:rgba(121, 30, 29, .8);
+			text-align: center;
+		}
+		
+		li a{
+			display:inline-block;
+			color:white;
+			text-align: center;
+			padding: 12px 90px;
+			text-decoration:underline;
+			font-size: 24px;
+			text-shadow: 2px 2px blue;
+		}
+
+
+		.meat a{
+			color: rgba(233 255 30 .7);
+			padding: 20px 16px;
+			text-decoration: underline;
+			display: block;
+			text-align: left;
+		}
+		
+
+		.meat a:hover{
+			background-color: blue;
+
+		}
+		.dropdown:hover .meat{
+			display:block;
+			
+		}
+		
+		button{margin-left: 7%;}
+
+	
+
+
+
+	</style>
+</head>
+<body>
+
+<h1 style="text-align: center; font-size: 2.5em; color: white; text-shadow: 5px 3px blue;">The Return of SEGA Genesis</h1>
+<h2 style="text-align: center; color: white; text-shadow: 2px 2px blue;">Maybe in a Home Near You June 2017</h2>
+	
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li class = "dropdown"><a class="dropbtn" href="#">Nostalgic Games</a>
+		<div class= "meat">
+			<a href="http://www.sonicthehedgehog.com/en" target="_blank">Sonic the Hedgehog</a>
+			<a href="http://game-oldies.com/play-online/streets-of-rage-sega-genesis" target="_blank">Streets of Rage</a>
+			<a href="http://www.letsplaysega.com/play-mortal-kombat-online" target="_blank">Mortal Kombat</a>
+			<a href="http://megaman.capcom.com" target="_blank">Mega Man</a>
+			<a href="http://game-oldies.com/play-online/castlevania-bloodlines-sega-genesis" target="_blank">Castlevania - Bloodlines</a>
+		</div>
+		</li>
+		<li><a href="http://www.ubergizmo.com/2016/11/sega-genesis-going-back-into-production" target="_blank">Updates</a></li>
+	</ul>
+
+
+	<center>
+
+<div id="Sega">
+
+			<div id="Genesis"></div>
+
+     <img id="sonic2" src="sonic2.gif">
+     <div id="teeth"></div>
+</div>
+		
+       
+
+
+
+</center>
+
+
+<center>
+<button onclick="Move()">Press Start</button>
+		
+</center>
+
+
+</body>
+	
+
+	<script type="text/javascript">
+		function Move(){
+			var elem = document.getElementById("Genesis");
+			var pos = -6;
+			var id = setInterval(frame, 2);
+			function frame(){
+				if (pos == 500){
+					clearInterval(id);
+				} else{
+					pos++;
+					elem.style.right = pos + "px";
+					elem.style.bottom = pos + "px";
+				}
+			}
+		}
+	</script>
+
+
+	
+</html>
